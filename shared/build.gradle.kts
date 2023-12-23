@@ -25,7 +25,7 @@ kotlin {
     jvm()
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dependencies here
+            implementation(libs.coroutine)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

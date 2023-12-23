@@ -1,6 +1,12 @@
 import SwiftUI
 import shared
 
+class Collector : Kotlinx_coroutines_coreFlowCollector {
+    func emit(value: Any?) async throws {
+        print("emit value = \(value)")
+    }
+}
+
 struct ContentView: View {
 	let greet = Greeting().greet()
 
@@ -26,6 +32,8 @@ struct ContentView: View {
             HogeKt.printFooHoge(hoge: hoge1)
             HogeKt.printBarHoge(hoge: hoge2)
             let e = DE()
+            let flow = ExampleKt.getExampleFlow()
+            let collector = Collector()
         })
     }
 }

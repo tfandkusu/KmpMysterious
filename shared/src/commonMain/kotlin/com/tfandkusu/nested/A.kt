@@ -4,7 +4,7 @@ class A {
     class B {
         data class C(
             val id: Long,
-            val name: String
+            val name: String,
         )
     }
 }
