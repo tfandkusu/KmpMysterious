@@ -1,16 +1,16 @@
-import SwiftUI
 import shared
+import SwiftUI
 
-class Collector : Kotlinx_coroutines_coreFlowCollector {
+class Collector: Kotlinx_coroutines_coreFlowCollector {
     func emit(value: Any?) async throws {
         print("emit value = \(value)")
     }
 }
 
 struct ContentView: View {
-	let greet = Greeting().greet()
+    let greet = Greeting().greet()
 
-	var body: some View {
+    var body: some View {
         Text(greet).onAppear(perform: {
             print("onApper")
             let hoge1 = FooHoge(
@@ -39,7 +39,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
-	}
+    static var previews: some View {
+        ContentView()
+    }
 }
