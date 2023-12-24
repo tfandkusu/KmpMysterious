@@ -1,9 +1,16 @@
 import ComposableArchitecture
+import shared
+
+class Collector: Kotlinx_coroutines_coreFlowCollector {
+    func emit(value: Any?) async throws {
+        print("emit value = \(value)")
+    }
+}
 
 @Reducer
 struct FlowExpReducer {
     struct State: Equatable {
-        var count: Int
+        var count = 0
     }
 
     enum Action {

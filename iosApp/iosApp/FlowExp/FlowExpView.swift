@@ -7,14 +7,14 @@ struct FlowExpView: View {
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             VStack {
-                Text("Count = \(viewStore.count)").padding(16)
+                Text("Count = \(viewStore.count)").padding(8)
                 Button(
                     action: {
                         viewStore.send(.countUp)
                     }
                 ) {
-                    Text("Count += 1")
-                }.padding(16)
+                    Text("Count Up")
+                }.padding(8)
                 Spacer()
             }.navigationBarTitle("Flow 動作確認")
         }
