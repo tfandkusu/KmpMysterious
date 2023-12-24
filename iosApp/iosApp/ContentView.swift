@@ -29,8 +29,6 @@ struct ContentView: View {
                     HogeKt.printFooHoge(hoge: hoge1)
                     HogeKt.printBarHoge(hoge: hoge2)
                     let e = DE()
-                    let flow = ExampleKt.getExampleFlow()
-                    let collector = Collector()
                 })
                 NavigationLink(
                     destination: FlowExpView(
