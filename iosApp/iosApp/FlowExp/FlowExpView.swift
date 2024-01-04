@@ -17,6 +17,10 @@ struct FlowExpView: View {
                 }.padding(8)
                 Spacer()
             }.navigationBarTitle("Flow 動作確認")
+                .onAppear(perform: {
+                    viewStore.send(.onAppear)
+                }
+                )
         }
     }
 }
